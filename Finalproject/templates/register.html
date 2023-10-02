@@ -1,0 +1,72 @@
+ <html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <head>
+         <title>Register Page</title>
+         <!-- Latest compiled and minified CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- Latest compiled JavaScript -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ <link rel="stylesheet" href="{{url_for('static',filename='css/register.css')}}">
+     </head>
+     <body class="container">
+         <div class="form">
+                <form onsubmit ="return verifyPassword()" action=""  method="POST">
+                    <h1><b>R</b>egister <b>F</b>orm</h1>
+                    <hr/>
+                    <div class="form-group">
+                       <i class="fa fa-user icon"></i>
+                        <input type="text"  placeholder="Name *" pattern="[a-zA-Z\s]*" title="Please enter on alphabets only. "  name="name" required>
+                     </div><br/>
+                    <div class="form-group">
+                       <i class="fa fa-user icon"></i>
+                        <input type="text"  placeholder="Username *" name="username" onkeypress="user()" required>
+                     </div>
+                           {% with messages = get_flashed_messages() %}
+           {% if messages %}
+           {% for msg in messages %}
+           <p class="already" id="error">{{msg}}</p>
+           {% endfor %}
+           {% endif %}
+      {% endwith %}
+                    <br/>
+                     <div class="form-group">
+                        <i class="fa fa-envelope icon"></i>
+                        <input type="email"  placeholder="Email *" pattern="[a-z0-9._%+-]+@gmail.com" title="enter valid mail id" name="email" required>
+                     </div><br/>
+                     <div class="form-group">
+                       <i class="fa fa-lock icon"></i>
+                        <input type="password"  placeholder="Password *" id="psw"  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" title="Must contain atleast one number and one uppercase and lowercase letter and  one Symbol, and at least 8 or more characters" name="password" required>
+                     </div>
+                     <br/>
+                     <div class="form-group">
+                       <i class="fa fa-lock icon"></i>
+                        <input type="password"  placeholder="Confirm Password *" id="cpsw" onkeypress="pass()" name="confirmpassword"  required>
+                     </div>
+                     <p id="mess">Password not matched</p><br/>
+                    <button class="btn btn-primary">Sign Up</button><br/>
+                    <p>Already have an account? <a href="login">Sign In</a></p>
+                </form>
+             </div>
+     </body>
+     <script>
+                 function verifyPassword() {  
+                       var pw = document.getElementById("psw").value;
+                     var cpw = document.getElementById("cpsw").value; 
+                       if(pw == cpw) {  
+                           //alert("Register Success"); 
+                       }  
+                     else{
+                     document.getElementById("mess").style.display="block"; 
+                            return false; 
+                     }
+                 }
+         function pass(){
+             document.getElementById("mess").style.display="none";
+         }
+         function user(){
+             document.getElementById("error").style.display="none";
+         }
+         </script>
+ </html>

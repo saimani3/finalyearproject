@@ -1,0 +1,359 @@
+<html>
+    <head>
+        <title>Home Page</title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+    </head>
+    <body>
+        <ul class="header">
+            <li><img src="{{url_for('static',filename='images/logo.jfif')}}"  class="avatar"></li>
+            <li><a href="#home">Home</a></li>
+            <li style="float:right"><a href="http://127.0.0.1:5000/logout">Logout</a></li>
+            <!-- <li style="float:right"><a class="active" href=""><i class="fa fa-shopping-cart"></i></a></li> -->
+          </ul>
+          <br/><br/>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="{{url_for('static',filename='images/pic1.jfif')}}">
+                        <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                    </a>
+                    <ul class="social">
+                        <!-- <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li> -->
+                        <li><a href="" data-toggle="modal" data-target="#exampleModal"   data-tip="Add to Comment"><i class="fa fa-comment"></i></a></li>
+                        <li><a href="" onclick="alert('Added to Cart')"  data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">20%</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Blouse</a></h3>
+                    <div class="price">₹1600.00
+                        <span>₹2000.00</span>
+                    </div>
+                    <!-- <a class="BuyNow" href="">BuyNow</a></br> -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#address">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="{{url_for('static',filename='images/pic2.jfif')}}">
+                        <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                    </a>
+                    <ul class="social">
+                        <!-- <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li> -->
+                        <li><a href="" data-toggle="modal" data-target="#exampleModal" data-tip="Add to Comment"><i class="fa fa-comment"></i></a></li>
+                        <li><a href="" onclick="alert('Added to Cart')" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">50%</span>
+                </div>
+                <!-- <ul class="rating">
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                </ul> -->
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Plain Tshirt</a></h3>
+                    <div class="price">₹500.00
+                        <span>₹1000.00</span>
+                    </div>
+                    <!-- <a class="BuyNow" href="">BuyNow</a> -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#address">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="{{url_for('static',filename='images/pic3.jfif')}}">
+                        <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                    </a>
+                    <ul class="social">
+                        <!-- <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li> -->
+                        <li><a href="" data-toggle="modal" data-target="#exampleModal" data-tip="Add to Comment"><i class="fa fa-comment"></i></a></li>
+                        <li><a href="" onclick="alert('Added to Cart')" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">50%</span>
+                </div>
+                <!-- <ul class="rating">
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                </ul> -->
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Plain shirt</a></h3>
+                    <div class="price">₹500.00
+                        <span>₹1000.00</span>
+                    </div>
+                    <!-- <a class="BuyNow" href="">BuyNow</a> -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#address">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="{{url_for('static',filename='images/pic4.jfif')}}">
+                        <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                    </a>
+                    <ul class="social">
+                        <!-- <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li> -->
+                        <li><a href="" data-toggle="modal" data-target="#exampleModal" data-tip="Add to Comment"><i class="fa fa-comment"></i></a></li>
+                        <li><a href="" onclick="alert('Added to Cart')" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">50%</span>
+                </div>
+                <!-- <ul class="rating">
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                </ul> -->
+                <div class="product-content">
+                    <h3 class="title"><a href="#">men's shoes</a></h3>
+                    <div class="price">₹2500.00
+                        <span>₹5000.00</span>
+                    </div>
+                    <!-- <a class="BuyNow" href="">BuyNow</a> -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#address">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="{{url_for('static',filename='images/pic8.jfif')}}">
+                        <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                    </a>
+                    <ul class="social">
+                        <!-- <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li> -->
+                        <li><a href="" data-toggle="modal" data-target="#exampleModal" data-tip="Add to Comment"><i class="fa fa-comment"></i></a></li>
+                        <li><a href="" onclick="alert('Added to Cart')" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">20%</span>
+                </div>
+                <!-- <ul class="rating">
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star disable"></li>
+                </ul> -->
+                <div class="product-content">
+                    <h3 class="title"><a href="#">iphone</a></h3>
+                    <div class="price">₹55000.00
+                        <span>₹60000.00</span>
+                    </div>
+                    <!-- <a class="BuyNow" href="">BuyNow</a> -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#address">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="{{url_for('static',filename='images/pic7.jfif')}}">
+                        <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                    </a>
+                    <ul class="social">
+                        <!-- <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li> -->
+                        <li><a href="" data-toggle="modal" data-target="#exampleModal" data-tip="Add to Comment"><i class="fa fa-comment"></i></a></li>
+                        <li><a href="" onclick="alert('Added to Cart')" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">50%</span>
+                </div>
+                <!-- <ul class="rating">
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                </ul> -->
+                <div class="product-content">
+                    <h3 class="title"><a href="#">HP Laptop</a></h3>
+                    <div class="price">₹50000.00
+                        <span>₹100000.00</span>
+                    </div>
+                    <!-- <a class="BuyNow" href="">BuyNow</a> -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#address">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="{{url_for('static',filename='images/pic5.jpg')}}">
+                        <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                    </a>
+                    <ul class="social">
+                        <!-- <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li> -->
+                        <li><a href="" data-toggle="modal" data-target="#exampleModal" data-tip="Add to Comment"><i class="fa fa-comment"></i></a></li>
+                        <li><a href="" onclick="alert('Added to Cart')" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">50%</span>
+                </div>
+                <!-- <ul class="rating">
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                </ul> -->
+                <div class="product-content">
+                    <h3 class="title"><a href="#">LS2978 Day and Date Functioning Steel Strap New Quartz Analog Watch - For Men</a></h3>
+                    <div class="price">₹500.00
+                        <span>₹1000.00</span>
+                    </div>
+                    <!-- <a class="BuyNow" href="">BuyNow</a> -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#address">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="{{url_for('static',filename='images/pic6.jfif')}}">
+                        <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                    </a>
+                    <ul class="social">
+                        <!-- <li><a href=""  data-tip="Add to Buy"><i class="fa fa-shopping-Buy"></i></a></li> -->
+                        <li><a href="" data-toggle="modal" data-target="#exampleModal" data-tip="Add to Comment"><i class="fa fa-comment"></i></a></li>
+                        <li><a href="" onclick="alert('Added to Cart')" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">50%</span>
+                </div>
+                <!-- <ul class="rating">
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                </ul> -->
+                <div class="product-content">
+                    <h3 class="title"><a href="#">KN-003 New Rose gold colored diamond studded strap Chronograph pattern watch for Girls Analog Watch - For Women</a></h3>
+                    <div class="price">₹500.00
+                        <span>₹1000.00</span>
+                    </div>
+                    <!-- <a class="BuyNow" href="">BuyNow</a> -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#address">Buy Now</button>
+                </div>
+            </div>
+        </div>
+          <form action="/home"  method="POST">
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Comment</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                
+                <div class="modal-body">
+                        <div class="form-group">
+                          <label for="recipient-name" class="col-form-label">ProductName:</label>
+                          <input type="text" class="form-control" name="product">
+                        </div>
+                        <div class="form-group">
+                          <label for="message-text" class="col-form-label">Comment:</label>
+                          <textarea class="form-control" name="messagetext"></textarea>
+                        </div>
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        {% for msg in messages %}
+                        <p class="already">{{msg}}</p>
+                        {% endfor %}
+                        {% endif %}
+                   {% endwith %}
+                      </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button  class="btn btn-primary">Send Comment</button>
+                </div>
+           
+              </div>
+            </div>
+          </div>
+        </form>
+        <form action="/address"  method="POST">
+            <div class="modal fade" id="address" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Order Address</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  
+                  <div class="modal-body">
+                          <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Name:</label>
+                            <input type="text" class="form-control" name="name">
+                          </div>
+                          <div class="form-group">
+                            <label for="message-text" class="col-form-label">Full Address:</label>
+                            <textarea class="form-control" name="address"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="Pincode-number" class="col-form-label">Pincode:</label>
+                            <input type="number" class="form-control" name="pincode">  
+                        </div>
+                        </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button  class="btn btn-primary" onclick="alert('Order Placed Successfully')">Place Order</button>
+                  </div>
+             
+                </div>
+              </div>
+            </div>
+          </form>
+  
+        <!-- <script>
+            $('#submit').click(function () {
+    /* when the submit button in the modal is clicked, submit the form */
+             
+    $('#ps_entry').submit();
+});
+          </script> -->
+          
+      </body>
+</html>
